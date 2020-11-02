@@ -1,0 +1,33 @@
+name: Build up Vuepress Site and Deploy to GitHub Page
+
+on:
+  push:
+    branches:
+      - docs
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+        with:
+          ref: docs
+
+      - name: Build Vuepress Site
+        run: yarn install && yarn run docs:build
+
+      #      - name: Create CNAME file
+      #        run: echo $CUSTOM_DOMAIN > ./docs/.vuepress/dist/CNAME
+      #        env:
+      #          CUSTOM_DOMAIN: site.site.site
+
+      - name: Deploy to GitHub Page
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/.vuepress/dist
+          publish_branch: gh-pages
+          force_orphan: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'

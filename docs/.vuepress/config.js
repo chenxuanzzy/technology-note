@@ -1,20 +1,9 @@
 const { description } = require('../../package')
 
 module.exports = {
-  /**
-   * Ref：https://v1.vuepress.vuejs.org/config/#title
-   */
+  base: '/technology-note/',
   title: 'Vuepress Docs',
-  /**
-   * Ref：https://v1.vuepress.vuejs.org/config/#description
-   */
   description: description,
-
-  /**
-   * Extra tags to be injected to the page HTML `<head>`
-   *
-   * ref：https://v1.vuepress.vuejs.org/config/#head
-   */
   head: [
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
@@ -27,9 +16,11 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: '',
+    repo: 'chenxuanzzy/technology-note',
+    docsRepo: 'chenxuanzzy/technology-note',
+    docsDir: 'docs',
+    docsBranch: 'docs',
     editLinks: true,
-    docsDir: '',
     editLinkText: '',
     lastUpdated: true,
     nav: [
@@ -41,19 +32,7 @@ module.exports = {
         text: 'VuePress',
         link: 'https://v1.vuepress.vuejs.org'
       }
-    ],
-    sidebar: {
-      '/guide/': [
-        {
-          title: 'Guide',
-          collapsable: false,
-          children: [
-            '',
-            'using-vue',
-          ]
-        }
-      ],
-    }
+    ]
   },
 
   /**
