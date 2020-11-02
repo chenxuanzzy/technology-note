@@ -1,0 +1,19 @@
+{
+  "name": "technology-note",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "authors": {
+    "name": "chenxuanzzy",
+    "email": ""
+  },
+  "repository": "https://github.com/chenxuanzzy/technology-note/technology-note",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.7.1"
+  }
+}
