@@ -1,0 +1,21 @@
+{
+  "name": "vuepress-blog-template",
+  "version": "0.0.1",
+  "description": "A blog powered by VuePress",
+  "authors": {
+    "name": "chenxuanzzy",
+    "email": "chenxsuan019@gmail.com"
+  },
+  "scripts": {
+    "dev": "vuepress dev blog",
+    "build": "vuepress build blog"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/theme-blog": "^2.3.3",
+    "vuepress": "^1.6.0"
+  },
+  "dependencies": {
+    "@vuepress/core": "^1.8.0"
+  }
+}
